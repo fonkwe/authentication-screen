@@ -1,11 +1,6 @@
 import React from 'react'
-import { Formik, Field, Form } from 'formik';
 import styles from './login-form.module.css'
 
-
-interface Values {
-    password: string;
-}
 
 export default function ResetPassword() {
     return (
@@ -14,29 +9,23 @@ export default function ResetPassword() {
         
             <h1 className="display-6 mb-3">Reset Password</h1>
 
-            
-            <Formik
-              initialValues={{
-                email: '',
-            }}
-
-               onSubmit={() => {
-
-               }}
-            >
-               <Form>
+                <form>
                
                     <div className="mb-3">
-                      <Field className="form-control" id="password" name="password" placeholder="Password" />
+                      <input className="form-control" id="password" name="oldpassword" placeholder="oldPassword" type="password" />
+                    </div>
+
+                    <div className="mb-3">
+                      <input className="form-control" id="password" name="newpassword" placeholder="newPassword" type="password" />
+                    </div>
+
+                    <div className="mb-3">
+                      <input className="form-control" id="password" name="confirmNewpassword" placeholder="confirmNewPassword" type="password" />
                     </div>
 
                     <button type="submit" className="btn btn-primary">Reset Password</button>
 
-                 </Form>
-
-             </Formik>
-        
-
+                 </form>
             
         </div>
     
