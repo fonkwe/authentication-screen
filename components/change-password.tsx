@@ -1,12 +1,7 @@
 import React from 'react'
-import { Formik, Field, Form } from 'formik';
 import styles from './login-form.module.css'
 
 
-interface Values {
-    confirmPassword: string;
-    password: string;
-}
 
 export default function ChangePassword() {
     return (
@@ -16,31 +11,21 @@ export default function ChangePassword() {
             <h1 className="display-6 mb-3">Change Password</h1>
 
             
-            <Formik
-              initialValues={{
-                username: '',
-                password: '',
-            }}
-
-               onSubmit={() => {
-
-               }}
-            >
-               <Form>
+               <form>
                
                     <div className="mb-3">
-                      <Field className="form-control" id="password" name="password" placeholder="Password" />
+                      <input className="form-control" type="password" id="password" name="password" placeholder="Password" />
                     </div>
  
                     <div className="mb-3">
-                      <Field className="form-control" id="password" name="confirmPassword" placeholder="Comfirm Password" type="password" />
+                      <input className="form-control" type="password" id="password" name="confirmPassword" placeholder="Comfirm Password" />
                     </div>
 
                     <button type="submit" className="btn btn-primary">Submit</button>
 
-                 </Form>
+                 </form>
 
-             </Formik>
+    
         
 
             
