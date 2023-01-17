@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main className="vh-100 d-flex justify-content-center align-items-center">
-         <LoginForm />
+        <LoginForm />
          <ChangePassword />
          <ResetPassword />
       </main>
